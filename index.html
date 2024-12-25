@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Scholarships for Rwandan Students</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .tasks-container {
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .task {
+            margin-bottom: 15px;
+        }
+
+        .task input {
+            margin-right: 10px;
+        }
+
+        .progress {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            transition: width 1s;
+        }
+
+        .error-message {
+            color: red;
+            font-weight: bold;
+            display: none;
+        }
+
+        .facebook-button {
+            background-color: #3b5998;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .facebook-button:hover {
+            background-color: #365899;
+        }
+
+        .share-facebook {
+            margin-top: 15px;
+        }
+
+        #eligibilityMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Free Scholarships for Rwandan Students</h1>
+        <p>Welcome to the platform for applying for scholarships in Rwanda and abroad!</p>
+    </header>
+
+    <div class="container" id="studentDetailsForm">
+        <form id="scholarshipForm">
+            <div class="form-group">
+                <label for="location">Choose your scholarship location:</label>
+                <select id="location" required>
+                    <option value="">Select Scholarship Location</option>
+                    <option value="rwanda">Rwanda</option>
+                    <option value="abroad">Abroad</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="school">School:</label>
+                <input type="text" id="school" required>
+            </div>
+
+            <div class="form-group">
+                <label for="combination">Advanced Level Combinations:</label>
+                <input type="text" id="combination" required>
+            </div>
+
+            <div class="form-group">
+                <label for="marks">National Examination Marks:</label>
+                <input type="number" id="marks" required>
+            </div>
+
+            <div class="form-group">
+                <label for="universityProgram">What do you want to study in university?</label>
+                <select id="universityProgram" required>
+                    <option value="">Select Program</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="medicine">Medicine</option>
+                    <option value="business">Business</option>
+                    <option value="arts">Arts</option>
+                    <option value="law">Law</option>
+                    <!-- Add more programs here -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" required>
+            </div>
+
+            <button type="button" id="nextButton" class="button">Next</button>
+        </form>
+    </div>
+
+    <div id="tasksPage" class="tasks-container" style="display: none;">
+        <h2>Complete the following tasks to be eligible for the scholarship:</h2>
+        
+        <div class="task">
+            <input type="checkbox" id="task1"> Share the website link in 5 WhatsApp groups
+            <a href="https://wa.me/?text=Check%20out%20this%20website%20for%20free%20scholarships%20for%20Rwandan%20students:%20https://www.example.com" target="_blank">
+                <button class="button">Share on WhatsApp</button>
+            </a>
+        </div>
+        
+        <div class="task">
+            <input type="checkbox" id="task2"> Share to 10 people on WhatsApp
+            <a href="https://wa.me/?text=Check%20out%20this%20website%20for%20free%20scholarships%20for%20Rwandan%20students:%20https://www.example.com" target="_blank">
+                <button class="button">Share on WhatsApp</button>
+            </a>
+        </div>
+
+        <div class="task">
+            <input type="checkbox" id="task3"> Share this video to Facebook
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/hzBhoQL-_lg?si=YU2bAVf_htBSP0zm" target="_blank">
+                <button class="facebook-button">Share Video on Facebook</button>
+            </a>
+        </div>
+        
+        <div class="task">
+            <input type="checkbox" id="task4"> Subscribe to our YouTube channel
+            <a href="https://youtu.be/hzBhoQL-_lg?si=YU2bAVf_htBSP0zm" target="_blank">
+                <button class="button">Subscribe to YouTube Channel</button>
+            </a>
+        </div>
+        
+        <div class="progress">
+            Progress: <span id="progressText">0%</span>
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div id="errorMessage" class="error-message">You must complete all tasks to be eligible for the scholarship!</div>
+
+        <button id="finalSubmit" class="button">Submit for Scholarship</button>
+        
+        <div id="eligibilityMessage">
+            Congratulations! You are eligible for the scholarship now. We will contact you via email.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("nextButton").addEventListener("click", function () {
+            document.getElementById("studentDetailsForm").style.display = "none";
+            document.getElementById("tasksPage").style.display = "block";
+        });
+
+        const tasks = [
+            document.getElementById("task1"),
+            document.getElementById("task2"),
+            document.getElementById("task3"),
+            document.getElementById("task4")
+        ];
+
+        tasks.forEach(task => {
+            task.addEventListener("change", updateProgress);
+        });
+
+        document.getElementById("finalSubmit").addEventListener("click", function () {
+            if (tasks.every(task => task.checked)) {
+                document.getElementById("eligibilityMessage").style.display = "block";
+            } else {
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        });
+
+        function updateProgress() {
+            let completedTasks = tasks.filter(task => task.checked).length;
+            let progress = (completedTasks / tasks.length) * 100;
+            document.getElementById("progressBar").style.width = progress + "%";
+            document.getElementById("progressText").textContent = Math.round(progress) + "%";
+        }
+    </script>
+</body>
+
+</html>
